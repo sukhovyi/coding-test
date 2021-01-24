@@ -100,8 +100,6 @@ export default {
   },
   methods: {
     onSearchChange(value) {
-      // eslint-disable-next-line no-console
-      console.log('onSearchChange');
       this.search = value;
     },
     prevPage() {
