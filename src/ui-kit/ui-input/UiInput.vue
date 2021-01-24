@@ -4,6 +4,7 @@
     <input-text
       v-bind:value="value"
       v-on:input="$emit('input', $event.target.value)"
+      v-on:change="$emit('change', $event.target.value)"
       :type="type"
     />
   </div>

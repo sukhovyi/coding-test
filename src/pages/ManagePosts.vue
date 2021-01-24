@@ -6,6 +6,11 @@
     <ui-button type="primary" @click="createPost">
       Create Post
     </ui-button>
+    <ui-input
+      :value="search"
+      @change="onSearchChange"
+      label="Search"
+    />
 
     <span v-if="isLoading">
       Loading...
@@ -42,10 +47,11 @@ import UiButton from '../ui-kit/ui-button/UiButton';
 import Pages from '../router/Pages';
 import { GET_POST_LIST } from '../apollo/queries';
 import { DELETE_POST } from '../apollo/mutations';
+import UiInput from '../ui-kit/ui-input/UiInput';
 
 export default {
   name: 'ManagePosts',
-  components: { UiButton, PostList },
+  components: { UiInput, UiButton, PostList },
   computed: {
     apolloVariables() {
       return {
@@ -93,6 +99,11 @@ export default {
     },
   },
   methods: {
+    onSearchChange(value) {
+      // eslint-disable-next-line no-console
+      console.log('onSearchChange');
+      this.search = value;
+    },
     prevPage() {
       this.paginate.page -= 1;
       this.$apollo.queries.posts.refetch(this.apolloVariables);
