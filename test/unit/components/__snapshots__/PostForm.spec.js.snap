@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/PostForm should be rendered correctly for edit post 1`] = `
+<div>
+  <div>
+    <ui-input-stub
+      debouncetime="0"
+      errors=""
+      hints=""
+      label="Post Title"
+      placeholder="Title"
+      type="text"
+      value="test title"
+    />
+  </div>
+   
+  <div>
+    <ui-textarea-stub
+      errors=""
+      hints=""
+      label="Post description"
+      placeholder="Description"
+      value="test description"
+    />
+  </div>
+   
+  <div>
+    <ui-button-stub
+      type="primary"
+    >
+      
+      Save Changes
+    
+    </ui-button-stub>
+     
+    <ui-button-stub
+      type="secondary"
+    >
+      
+      Cancel
+    
+    </ui-button-stub>
+  </div>
+</div>
+`;
+
+exports[`components/PostForm should be rendered correctly for new post 1`] = `
+<div>
+  <div>
+    <ui-input-stub
+      debouncetime="0"
+      errors=""
+      hints=""
+      label="Post Title"
+      placeholder="Title"
+      type="text"
+    />
+  </div>
+   
+  <div>
+    <ui-textarea-stub
+      errors=""
+      hints=""
+      label="Post description"
+      placeholder="Description"
+    />
+  </div>
+   
+  <div>
+    <ui-button-stub
+      type="primary"
+    >
+      
+      Create Post
+    
+    </ui-button-stub>
+     
+    <ui-button-stub
+      type="secondary"
+    >
+      
+      Cancel
+    
+    </ui-button-stub>
+  </div>
+</div>
+`;

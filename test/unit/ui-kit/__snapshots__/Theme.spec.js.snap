@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui-kit/Theme should have correct setup 1`] = `
+Object {
+  "backgroundColor": "#FFFFFF",
+  "colors": Object {
+    "danger": "#CC2E2E",
+    "primary": "#0063D9",
+    "secondary": "#E7E7E7",
+    "success": "#3FBA69",
+    "tertiary": "#AAAAAA",
+  },
+  "fontSize": "16px",
+  "foregroundColor": "#333333",
+}
+`;

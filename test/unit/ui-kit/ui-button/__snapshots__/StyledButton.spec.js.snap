@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui-kit/ui-button/StyledButton DangerButton should have correct styling 1`] = `
+Object {
+  "__emotion_base": "button",
+  "__emotion_real": [Circular],
+  "__emotion_styles": Array [
+    "
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+",
+    "
+  background-color: ",
+    "#CC2E2E",
+    ";
+  color: #FFFFFF;
+",
+  ],
+  "functional": true,
+  "inject": Object {
+    "theme": Object {
+      "default": undefined,
+    },
+  },
+  "name": "Styledbutton",
+  "render": [Function],
+  "withComponent": [Function],
+}
+`;
+
+exports[`ui-kit/ui-button/StyledButton PrimaryButton should have correct styling 1`] = `
+Object {
+  "__emotion_base": "button",
+  "__emotion_real": [Circular],
+  "__emotion_styles": Array [
+    "
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+",
+    "
+  background-color: ",
+    "#0063D9",
+    ";
+  color: #FFFFFF;
+",
+  ],
+  "functional": true,
+  "inject": Object {
+    "theme": Object {
+      "default": undefined,
+    },
+  },
+  "name": "Styledbutton",
+  "render": [Function],
+  "withComponent": [Function],
+}
+`;
+
+exports[`ui-kit/ui-button/StyledButton SecondaryButton should have correct styling 1`] = `
+Object {
+  "__emotion_base": "button",
+  "__emotion_real": [Circular],
+  "__emotion_styles": Array [
+    "
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+",
+    "
+  background-color: ",
+    "#E7E7E7",
+    ";
+",
+  ],
+  "functional": true,
+  "inject": Object {
+    "theme": Object {
+      "default": undefined,
+    },
+  },
+  "name": "Styledbutton",
+  "render": [Function],
+  "withComponent": [Function],
+}
+`;
+
+exports[`ui-kit/ui-button/StyledButton SuccessButton should have correct styling 1`] = `
+Object {
+  "__emotion_base": "button",
+  "__emotion_real": [Circular],
+  "__emotion_styles": Array [
+    "
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+",
+    "
+  background-color: ",
+    "#3FBA69",
+    ";
+  color: #FFFFFF;
+",
+  ],
+  "functional": true,
+  "inject": Object {
+    "theme": Object {
+      "default": undefined,
+    },
+  },
+  "name": "Styledbutton",
+  "render": [Function],
+  "withComponent": [Function],
+}
+`;
+
+exports[`ui-kit/ui-button/StyledButton TertiaryButton should have correct styling 1`] = `
+Object {
+  "__emotion_base": "button",
+  "__emotion_real": [Circular],
+  "__emotion_styles": Array [
+    "
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+",
+    "
+  background-color: ",
+    "#AAAAAA",
+    ";
+",
+  ],
+  "functional": true,
+  "inject": Object {
+    "theme": Object {
+      "default": undefined,
+    },
+  },
+  "name": "Styledbutton",
+  "render": [Function],
+  "withComponent": [Function],
+}
+`;

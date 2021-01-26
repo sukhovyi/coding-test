@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages/CreatePost should be rendered correctly 1`] = `
+<ui-row-stub>
+  <ui-col-stub
+    cols="10"
+  >
+    <h1>
+      
+      Create Post
+    
+    </h1>
+  </ui-col-stub>
+   
+  <ui-col-stub
+    cols="10"
+  >
+    <post-form-stub
+      post="[object Object]"
+    />
+  </ui-col-stub>
+</ui-row-stub>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui-kit/ui-button/ButtonType should have correct setup 1`] = `
+Object {
+  "DANGER": "danger",
+  "PRIMARY": "primary",
+  "SECONDARY": "secondary",
+  "SUCCESS": "success",
+  "TERTIARY": "tertiary",
+  "getButtonByType": [Function],
+  "getButtons": [Function],
+}
+`;

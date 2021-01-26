@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ui-kit/ui-base-input BaseInput should have correct styling 1`] = `
+Object {
+  "__emotion_base": "div",
+  "__emotion_real": [Circular],
+  "__emotion_styles": Array [
+    "
+  margin: 15px 0;
+",
+  ],
+  "functional": true,
+  "inject": Object {
+    "theme": Object {
+      "default": undefined,
+    },
+  },
+  "name": "Styleddiv",
+  "render": [Function],
+  "withComponent": [Function],
+}
+`;
+
+exports[`ui-kit/ui-base-input UiBaseInput should be rendered correctly 1`] = `
+<base-input-stub>
+  <div>
+    
+    Test Label
+  
+  </div>
+   
+  <div />
+   
+  <div
+    class="caption"
+  >
+    <span>
+      
+      test hint
+    
+    </span>
+  </div>
+</base-input-stub>
+`;
+
+exports[`ui-kit/ui-base-input UiBaseInput should be rendered correctly when has errors 1`] = `
+<base-input-stub>
+  <div>
+    
+    Test Label
+  
+  </div>
+   
+  <div />
+   
+  <div
+    class="caption"
+  >
+    <ui-error-message-stub>
+      
+      test error
+    
+    </ui-error-message-stub>
+  </div>
+</base-input-stub>
+`;

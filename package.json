@@ -7,14 +7,27 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "unit": "jest --config test/unit/jest.conf.js --coverage",
+    "unit": "jest --config test/unit/jest.conf.js",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@egoist/vue-emotion": "^0.6.2",
+    "@vue/test-utils": "^1.1.2",
+    "apollo-boost": "^0.4.9",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-http": "^1.5.17",
+    "gql-loader": "^1.0.0",
+    "graphql": "^15.4.0",
+    "graphql-tag": "^2.11.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-apollo": "^3.0.5",
+    "vue-confirm-dialog": "^1.0.2",
+    "vue-router": "^3.0.1",
+    "vue-toasted": "^1.1.28"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

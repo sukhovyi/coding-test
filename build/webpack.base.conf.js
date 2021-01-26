@@ -74,6 +74,16 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'gql-loader',
+          options: {
+            baseDir: path.resolve(`${__dirname}/../src/graphql`)
+          }
+        }
       }
     ]
   },

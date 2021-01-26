@@ -1,0 +1,17 @@
+query GetPostList(
+  $options: PageQueryOptions
+) {
+  posts(options: $options) {
+    data {
+      id,
+      title,
+      user {
+        id,
+        username,
+      }
+    },
+    meta {
+      totalCount,
+    },
+  }
+}
