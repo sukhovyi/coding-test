@@ -5,6 +5,7 @@
         v-model="post.title"
         :errors="error.title"
         label="Post Title"
+        placeholder="Title"
       />
     </div>
     <div>
@@ -12,6 +13,7 @@
         v-model="post.body"
         :errors="error.body"
         label="Post description"
+        placeholder="Description"
       />
     </div>
     <div>

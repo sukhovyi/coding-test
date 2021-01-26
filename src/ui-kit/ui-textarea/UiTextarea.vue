@@ -4,7 +4,8 @@
     :errors="errors"
     :hints="hints"
   >
-    <text-area
+    <styled-text-area
+      :placeholder="placeholder"
       v-bind:value="value"
       v-on:input="$emit('input', $event.target.value)"
     />
@@ -12,20 +13,14 @@
 </template>
 
 <script>
-import { styled } from '@egoist/vue-emotion';
+import StyledTextArea from './StyledTextArea';
 import UiBaseInput from '../ui-base-input/UiBaseInput';
-
-const TextArea = styled('textarea')`
-  width:100%;
-  border: 1px solid black;
-  border-radius: 5px;
-`;
 
 export default {
   name: 'UiTextarea',
   components: {
     UiBaseInput,
-    TextArea,
+    StyledTextArea,
   },
   props: {
     value: {
@@ -33,7 +28,11 @@ export default {
     },
     label: {
       type: String,
-      required: true,
+      required: false,
+    },
+    placeholder: {
+      type: String,
+      required: false,
     },
     errors: {
       type: Array,

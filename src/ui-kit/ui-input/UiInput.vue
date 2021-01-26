@@ -4,37 +4,37 @@
     :errors="errors"
     :hints="hints"
   >
-    <input-text
+    <styled-input
+      :placeholder="placeholder"
+      :type="type"
       v-bind:value="value"
       v-on:input="inputChange"
       v-on:change="$emit('change', $event.target.value)"
-      :type="type"
     />
   </ui-base-input>
 </template>
 
 <script>
-import { styled } from '@egoist/vue-emotion';
+import StyledInput from './StyledInput';
 import UiBaseInput from '../ui-base-input/UiBaseInput';
 
-const InputText = styled('input')`
-  width:100%;
-  border: 1px solid black;
-  border-radius: 5px;
-`;
 export default {
   name: 'UiInput',
   components: {
     UiBaseInput,
-    InputText,
+    StyledInput,
   },
   props: {
     value: {
       required: true,
     },
+    placeholder: {
+      type: String,
+      required: false,
+    },
     label: {
       type: String,
-      required: true,
+      required: false,
     },
     errors: {
       type: Array,
