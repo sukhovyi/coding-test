@@ -1,19 +1,22 @@
 <template>
-  <div class="input-container">
-    {{ label }}
+  <ui-base-input
+    :label="label"
+    :errors="errors"
+    :hints="hints"
+  >
     <text-area
       v-bind:value="value"
       v-on:input="$emit('input', $event.target.value)"
     />
-  </div>
+  </ui-base-input>
 </template>
 
 <script>
 import { styled } from '@egoist/vue-emotion';
+import UiBaseInput from '../ui-base-input/UiBaseInput';
 
 const TextArea = styled('textarea')`
   width:100%;
-  padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
 `;
@@ -21,6 +24,7 @@ const TextArea = styled('textarea')`
 export default {
   name: 'UiTextarea',
   components: {
+    UiBaseInput,
     TextArea,
   },
   props: {
@@ -30,6 +34,18 @@ export default {
     label: {
       type: String,
       required: true,
+    },
+    errors: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+    hints: {
+      type: Array,
+      default() {
+        return [];
+      },
     },
   },
 };
