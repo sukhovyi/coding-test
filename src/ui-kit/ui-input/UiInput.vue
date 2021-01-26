@@ -3,7 +3,7 @@
     {{ label }}
     <input-text
       v-bind:value="value"
-      v-on:input="$emit('input', $event.target.value)"
+      v-on:input="inputChange"
       v-on:change="$emit('change', $event.target.value)"
       :type="type"
     />
@@ -35,6 +35,19 @@ export default {
     type: {
       type: String,
       default: 'text',
+    },
+    debounceTime: {
+      type: Number,
+      default: 0,
+    },
+  },
+  methods: {
+    inputChange(event) {
+      if (this.timeout) {
+        clearTimeout(this.timeout);
+      }
+
+      this.timeout = setTimeout(() => this.$emit('input', event.target.value), this.debounceTime);
     },
   },
 };

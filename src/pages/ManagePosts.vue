@@ -8,7 +8,8 @@
     </ui-button>
     <ui-input
       :value="search"
-      @change="onSearchChange"
+      :debounce-time="searchDebounce"
+      @input="onSearchChange"
       label="Search"
     />
 
@@ -81,6 +82,7 @@ export default {
         page: 1,
         limit: 20,
       },
+      searchDebounce: 2000,
       search: '',
       isLoading: true,
     };
@@ -101,6 +103,7 @@ export default {
   methods: {
     onSearchChange(value) {
       this.search = value;
+      this.isLoading = true;
     },
     prevPage() {
       this.paginate.page -= 1;
