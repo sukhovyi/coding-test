@@ -1,48 +1,46 @@
 <template>
-  <div>
-    <div class="row">
-      <div class="col-8">
-        <h1>
-          Manage Posts
-        </h1>
-      </div>
-      <div class="col-2 align-center-end">
-        <ui-button type="primary" @click="createPost">
-          Create Post
-        </ui-button>
-      </div>
-      <div class="col-10">
-        <ui-input
-          :value="search"
-          :debounce-time="searchDebounce"
-          :hints="searchHints"
-          @input="onSearchChange"
-          placeholder="Search posts..."
-        />
+  <ui-row>
+    <div class="col-8">
+      <h1>
+        Manage Posts
+      </h1>
+    </div>
+    <div class="col-2 align-center-end">
+      <ui-button type="primary" @click="createPost">
+        Create Post
+      </ui-button>
+    </div>
+    <div class="col-10">
+      <ui-input
+        :value="search"
+        :debounce-time="searchDebounce"
+        :hints="searchHints"
+        @input="onSearchChange"
+        placeholder="Search posts..."
+      />
 
-        <div v-if="!isLoading">
-          <post-list
-            :posts="collection.posts"
-            @delete="handleDeletePost"
-          />
-          <div>
-            <ui-button
-              v-if="!isFirstPage"
-              @click="prevPage"
-            >
-              Previous Page
-            </ui-button>
-            <ui-button
-              v-if="!isLastPage"
-              @click="nextPage"
-            >
-              Next Page
-            </ui-button>
-          </div>
+      <div v-if="!isLoading">
+        <post-list
+          :posts="collection.posts"
+          @delete="handleDeletePost"
+        />
+        <div>
+          <ui-button
+            v-if="!isFirstPage"
+            @click="prevPage"
+          >
+            Previous Page
+          </ui-button>
+          <ui-button
+            v-if="!isLastPage"
+            @click="nextPage"
+          >
+            Next Page
+          </ui-button>
         </div>
       </div>
     </div>
-  </div>
+  </ui-row>
 </template>
 
 <script>
@@ -52,10 +50,11 @@ import Pages from '../router/Pages';
 import { GET_POST_LIST } from '../apollo/queries';
 import { DELETE_POST } from '../apollo/mutations';
 import UiInput from '../ui-kit/ui-input/UiInput';
+import UiRow from '../ui-kit/ui-row/UiRow';
 
 export default {
   name: 'ManagePosts',
-  components: { UiInput, UiButton, PostList },
+  components: { UiRow, UiInput, UiButton, PostList },
   computed: {
     apolloVariables() {
       return {

@@ -41,13 +41,6 @@ const GlobalStyle = createGlobalStyle`
     color: ${Theme.colors.tertiary};
   }
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
-    padding: 12px;
-  }
-
   .col-10 {
     flex: 0 0 100%;
     max-width: 100%;

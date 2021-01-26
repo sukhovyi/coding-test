@@ -1,6 +1,6 @@
 <template>
   <div class="post-list">
-    <div v-for="post in posts" :key="post.id" class="row post-list-item">
+    <ui-row v-for="post in posts" :key="post.id" class="post-list-item">
       <div class="col-8">
         <p>
           {{ post.title }}
@@ -17,17 +17,18 @@
           Delete
         </ui-button>
       </div>
-    </div>
+    </ui-row>
   </div>
 </template>
 
 <script>
 import UiButton from '../ui-kit/ui-button/UiButton';
 import Pages from '../router/Pages';
+import UiRow from '../ui-kit/ui-row/UiRow';
 
 export default {
   name: 'PostList',
-  components: { UiButton },
+  components: { UiRow, UiButton },
   props: {
     posts: {
       type: Array,
