@@ -1,6 +1,8 @@
 import { createGlobalStyle } from '@egoist/vue-emotion';
 import Theme from './Theme';
 
+// to be truth I do not like vue-emotion, fo react it looks much better
+
 const GlobalStyle = createGlobalStyle`
   body {
     font-size: ${Theme.fontSize};
@@ -52,9 +54,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .post-list-item {
-    border: 1px solid #E7E7E7;
+    border: 1px solid ${Theme.colors.secondary};
     margin-bottom: 10px;
     border-radius: 10px;
+  }
+
+  .error {
+    color: ${Theme.colors.danger}!important;
   }
 `;
 

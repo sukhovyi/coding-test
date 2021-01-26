@@ -1,18 +1,18 @@
 <template>
-  <div>
-    <div v-if="label" class="caption">
+  <base-input>
+    <div v-if="label">
       {{ label }}
     </div>
     <div>
       <slot/>
     </div>
     <div v-if="errors.length" class="caption">
-      <span
+      <ui-error-message
         v-for="(error, key) in errors"
         :key="key"
       >
         {{ error }}
-      </span>
+      </ui-error-message>
     </div>
     <div v-else-if="hints.length" class="caption">
       <span
@@ -22,13 +22,16 @@
         {{ hint }}
       </span>
     </div>
-  </div>
+  </base-input>
 </template>
 
 <script>
+import BaseInput from './BaseInput';
+import UiErrorMessage from '../ui-error-message/UiErrorMessage';
 
 export default {
   name: 'UiBaseInput',
+  components: { UiErrorMessage, BaseInput },
   props: {
     label: {
       type: String,

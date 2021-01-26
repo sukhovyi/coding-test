@@ -4,7 +4,8 @@
     :errors="errors"
     :hints="hints"
   >
-    <styled-input
+    <component
+      :is="component"
       :placeholder="placeholder"
       :type="type"
       v-bind:value="value"
@@ -15,14 +16,13 @@
 </template>
 
 <script>
-import StyledInput from './StyledInput';
+import { StyledInput, StyledInputError } from './StyledInput';
 import UiBaseInput from '../ui-base-input/UiBaseInput';
 
 export default {
   name: 'UiInput',
   components: {
     UiBaseInput,
-    StyledInput,
   },
   props: {
     value: {
@@ -55,6 +55,11 @@ export default {
     debounceTime: {
       type: Number,
       default: 0,
+    },
+  },
+  computed: {
+    component() {
+      return this.errors.length ? StyledInputError : StyledInput;
     },
   },
   methods: {

@@ -1,7 +1,7 @@
 import { styled } from '@egoist/vue-emotion';
 import Theme from '../Theme';
 
-const StyledTextArea = styled('textarea')`
+export const StyledTextArea = styled('textarea')`
   width:100%;
   font-size: ${Theme.fontSize};
   border: 1px solid ${Theme.colors.secondary};
@@ -9,4 +9,6 @@ const StyledTextArea = styled('textarea')`
   height: 300px;
 `;
 
-export default StyledTextArea;
+export const StyledTextAreaError = styled(StyledTextArea)`
+  border: 1px solid ${Theme.colors.danger};
+`;

@@ -4,7 +4,7 @@
     :errors="errors"
     :hints="hints"
   >
-    <styled-text-area
+    <component :is="component"
       :placeholder="placeholder"
       v-bind:value="value"
       v-on:input="$emit('input', $event.target.value)"
@@ -13,14 +13,13 @@
 </template>
 
 <script>
-import StyledTextArea from './StyledTextArea';
+import { StyledTextArea, StyledTextAreaError } from './StyledTextArea';
 import UiBaseInput from '../ui-base-input/UiBaseInput';
 
 export default {
   name: 'UiTextarea',
   components: {
     UiBaseInput,
-    StyledTextArea,
   },
   props: {
     value: {
@@ -45,6 +44,11 @@ export default {
       default() {
         return [];
       },
+    },
+  },
+  computed: {
+    component() {
+      return this.errors.length ? StyledTextAreaError : StyledTextArea;
     },
   },
 };
