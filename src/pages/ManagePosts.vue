@@ -20,10 +20,7 @@
           placeholder="Search posts..."
         />
 
-        <span v-if="isLoading">
-      Loading...
-    </span>
-        <div v-else>
+        <div v-if="!isLoading">
           <post-list
             :posts="collection.posts"
             @delete="handleDeletePost"
@@ -33,13 +30,13 @@
               v-if="!isFirstPage"
               @click="prevPage"
             >
-              prev page
+              Previous Page
             </ui-button>
             <ui-button
               v-if="!isLastPage"
               @click="nextPage"
             >
-              next page
+              Next Page
             </ui-button>
           </div>
         </div>
@@ -77,7 +74,7 @@ export default {
       return this.paginate.page >= this.collection.totalCount / this.paginate.limit;
     },
     searchHints() {
-      return this.isLoading ? [] : [`Posts found: ${this.collection.totalCount}`];
+      return this.isLoading ? ['Loading...'] : [`Posts found: ${this.collection.totalCount}`];
     },
   },
   data() {
@@ -110,17 +107,22 @@ export default {
     },
   },
   methods: {
+    markAsLoading() {
+      this.isLoading = true;
+    },
     onSearchChange(value) {
       this.search = value;
-      this.isLoading = true;
+      this.markAsLoading();
     },
     prevPage() {
       this.paginate.page -= 1;
       this.$apollo.queries.posts.refetch(this.apolloVariables);
+      this.markAsLoading();
     },
     nextPage() {
       this.paginate.page += 1;
       this.$apollo.queries.posts.refetch(this.apolloVariables);
+      this.markAsLoading();
     },
     createPost() {
       this.$router.push({ name: Pages.CREATE_POST });

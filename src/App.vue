@@ -17,7 +17,3 @@ export default {
   components: { GlobalStyles },
 };
 </script>
-
-<style>
-@import "./ui-kit/styles/theme.css";
-</style>

@@ -7,6 +7,7 @@ const Button = styled('button')`
   border: none;
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
 `;
 
 export const PrimaryButton = styled(Button)`

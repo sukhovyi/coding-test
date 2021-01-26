@@ -1,23 +1,23 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="post in posts" :key="post.id">
-        <div>
+  <div class="post-list">
+    <div v-for="post in posts" :key="post.id" class="row post-list-item">
+      <div class="col-8">
+        <p>
           {{ post.title }}
-        </div>
-        <div>
+        </p>
+        <span class="caption">
           by {{ post.user.username }}
-        </div>
-        <div>
-          <ui-button type="secondary" @click="editPost(post.id)">
-            Edit Post
-          </ui-button>
-          <ui-button type="danger" @click="deletePost(post.id)">
-            Delete
-          </ui-button>
-        </div>
-      </li>
-    </ul>
+        </span>
+      </div>
+      <div class="col-2">
+        <ui-button type="secondary" @click="editPost(post.id)">
+          Edit Post
+        </ui-button>
+        <ui-button type="danger" @click="deletePost(post.id)">
+          Delete
+        </ui-button>
+      </div>
+    </div>
   </div>
 </template>
 

@@ -4,6 +4,7 @@ import Theme from '../Theme';
 const StyledInput = styled('input')`
   width:100%;
   border-radius: 5px;
+  border: 1px solid ${Theme.colors.secondary};
   flex: 1 1 auto;
   font-size: ${Theme.fontSize};
   line-height: 20px;
