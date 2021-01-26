@@ -149,6 +149,7 @@ export default {
           id: postId,
         },
         update: () => {
+          this.$toasted.success('Post was successfully removed.');
           this.collection.posts = this.collection.posts.filter(post => post.id !== postId);
           this.collection.totalCount -= 1;
         },

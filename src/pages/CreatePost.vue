@@ -46,6 +46,7 @@ export default {
           },
         },
       });
+      this.$toasted.success('Post was successfully created.');
       this.returnBack();
     },
     cancel() {

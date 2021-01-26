@@ -77,7 +77,7 @@ export default {
           id: this.post.id,
         },
       });
-
+      this.$toasted.success('Post was successfully removed.');
       this.returnBack();
     },
     async saveChanges(post) {
@@ -91,6 +91,7 @@ export default {
           },
         },
       });
+      this.$toasted.success('Post was successfully updated.');
 
       this.returnBack();
     },

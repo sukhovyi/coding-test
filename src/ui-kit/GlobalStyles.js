@@ -62,6 +62,17 @@ const GlobalStyle = createGlobalStyle`
   .error {
     color: ${Theme.colors.danger}!important;
   }
+
+  .ui-kit-toast {
+    border-radius: 10px !important;
+    font-size: 16px !important;
+  }
+  .ui-kit-toast.ui-kit-toast.success {
+    background: ${Theme.colors.success};
+  }
+  .ui-kit-toast.ui-kit-toast.alert {
+    background: ${Theme.colors.danger};
+  }
 `;
 
 export default GlobalStyle;
