@@ -1,7 +1,7 @@
 <template>
   <div class="post-list">
     <ui-row v-for="post in posts" :key="post.id" class="post-list-item">
-      <ui-col cols="8">
+      <ui-col :cols="8">
         <p>
           {{ post.title }}
         </p>
@@ -9,7 +9,7 @@
           by {{ post.user.username }}
         </span>
       </ui-col>
-      <ui-col cols="2">
+      <ui-col :cols="2">
         <ui-button type="secondary" @click="editPost(post.id)">
           Edit Post
         </ui-button>

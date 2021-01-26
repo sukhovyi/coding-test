@@ -1,16 +1,16 @@
 <template>
   <ui-row>
-    <ui-col cols="8">
+    <ui-col :cols="8">
       <h1>
         Manage Posts
       </h1>
     </ui-col>
-    <ui-col cols="2" class="align-center-end">
+    <ui-col :cols="2" class="align-center-end">
       <ui-button type="primary" @click="createPost">
         Create Post
       </ui-button>
     </ui-col>
-    <ui-col cols="10">
+    <ui-col :cols="10">
       <ui-input
         :value="search"
         :debounce-time="searchDebounce"

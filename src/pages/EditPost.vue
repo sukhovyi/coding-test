@@ -1,11 +1,11 @@
 <template>
   <ui-row>
-    <ui-col cols="8">
+    <ui-col :cols="8">
       <h1>
         Edit Post
       </h1>
     </ui-col>
-    <ui-col cols="2" class="align-center-end">
+    <ui-col :cols="2" class="align-center-end">
       <ui-button type="danger" @click="handleDeletePost">
         Delete Post
       </ui-button>
