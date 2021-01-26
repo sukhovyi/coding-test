@@ -15,17 +15,15 @@
         <ui-input
           :value="search"
           :debounce-time="searchDebounce"
+          :hints="searchHints"
           @input="onSearchChange"
-          label="Search"
+          placeholder="Search posts..."
         />
 
         <span v-if="isLoading">
       Loading...
     </span>
         <div v-else>
-          <p>
-            Posts found: {{ collection.totalCount }}
-          </p>
           <post-list
             :posts="collection.posts"
             @delete="handleDeletePost"
@@ -77,6 +75,9 @@ export default {
     },
     isLastPage() {
       return this.paginate.page >= this.collection.totalCount / this.paginate.limit;
+    },
+    searchHints() {
+      return this.isLoading ? [] : [`Posts found: ${this.collection.totalCount}`];
     },
   },
   data() {

@@ -8,6 +8,7 @@ const Theme = Object.freeze({
     danger: '#CC2E2E',
     success: '#3FBA69',
   },
+  fontSize: '16px',
 });
 
 export default Theme;
