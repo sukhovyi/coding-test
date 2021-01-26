@@ -22,7 +22,7 @@
       </p>
       <post-list
         :posts="collection.posts"
-        @delete="deletePost"
+        @delete="handleDeletePost"
       />
       <div>
         <ui-button
@@ -115,6 +115,21 @@ export default {
     },
     createPost() {
       this.$router.push({ name: Pages.CREATE_POST });
+    },
+    handleDeletePost(postId) {
+      this.$confirm({
+        title: 'Delete Post',
+        message: 'Are you sure you want to delete this post?',
+        button: {
+          yes: 'Yes, delete',
+          no: 'Cancel',
+        },
+        callback: (confirm) => {
+          if (confirm) {
+            this.deletePost(postId);
+          }
+        },
+      });
     },
     async deletePost(postId) {
       await this.$apollo.mutate({

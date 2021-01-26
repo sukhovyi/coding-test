@@ -3,7 +3,7 @@
     <h1>
       Edit Post
     </h1>
-    <ui-button type="danger" @click="deletePost">
+    <ui-button type="danger" @click="handleDeletePost">
       Delete Post
     </ui-button>
 
@@ -47,6 +47,21 @@ export default {
     },
     cancel() {
       this.returnBack();
+    },
+    handleDeletePost() {
+      this.$confirm({
+        title: 'Delete Post',
+        message: 'Are you sure you want to delete this post?',
+        button: {
+          yes: 'Yes, delete',
+          no: 'Cancel',
+        },
+        callback: (confirm) => {
+          if (confirm) {
+            this.deletePost();
+          }
+        },
+      });
     },
     async deletePost() {
       await this.$apollo.mutate({
