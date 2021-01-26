@@ -1,23 +1,23 @@
 <template>
   <ui-row>
-    <div class="col-8">
+    <ui-col cols="8">
       <h1>
         Edit Post
       </h1>
-    </div>
-    <div class="col-2 align-center-end">
+    </ui-col>
+    <ui-col cols="2" class="align-center-end">
       <ui-button type="danger" @click="handleDeletePost">
         Delete Post
       </ui-button>
-    </div>
-    <div class="col-10">
+    </ui-col>
+    <ui-col>
       <post-form
         v-if="post"
         :post="post"
         @save="saveChanges"
         @cancel="cancel"
       />
-    </div>
+    </ui-col>
   </ui-row>
 </template>
 
@@ -28,10 +28,11 @@ import Pages from '../router/Pages';
 import { GET_POST } from '../apollo/queries';
 import { DELETE_POST, UPDATE_POST } from '../apollo/mutations';
 import UiRow from '../ui-kit/ui-row/UiRow';
+import UiCol from '../ui-kit/ui-col/UiCol';
 
 export default {
   name: 'EditPost',
-  components: { UiRow, UiButton, PostForm },
+  components: { UiCol, UiRow, UiButton, PostForm },
   data() {
     return {
       post: null,

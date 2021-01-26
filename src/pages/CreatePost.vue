@@ -1,17 +1,17 @@
 <template>
   <ui-row>
-    <div class="col-10">
+    <ui-col>
       <h1>
         Create Post
       </h1>
-    </div>
-    <div class="col-10">
+    </ui-col>
+    <ui-col>
       <post-form
         :post="post"
         @save="createPost"
         @cancel="cancel"
       />
-    </div>
+    </ui-col>
   </ui-row>
 </template>
 
@@ -22,10 +22,11 @@ import Pages from '../router/Pages';
 import UiInput from '../ui-kit/ui-input/UiInput';
 import { CREATE_POST } from '../apollo/mutations';
 import UiRow from '../ui-kit/ui-row/UiRow';
+import UiCol from '../ui-kit/ui-col/UiCol';
 
 export default {
   name: 'CreatePost',
-  components: { UiRow, UiInput, UiButton, PostForm },
+  components: { UiCol, UiRow, UiInput, UiButton, PostForm },
   data() {
     return {
       post: {

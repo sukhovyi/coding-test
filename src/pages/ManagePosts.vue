@@ -1,16 +1,16 @@
 <template>
   <ui-row>
-    <div class="col-8">
+    <ui-col cols="8">
       <h1>
         Manage Posts
       </h1>
-    </div>
-    <div class="col-2 align-center-end">
+    </ui-col>
+    <ui-col cols="2" class="align-center-end">
       <ui-button type="primary" @click="createPost">
         Create Post
       </ui-button>
-    </div>
-    <div class="col-10">
+    </ui-col>
+    <ui-col cols="10">
       <ui-input
         :value="search"
         :debounce-time="searchDebounce"
@@ -39,7 +39,7 @@
           </ui-button>
         </div>
       </div>
-    </div>
+    </ui-col>
   </ui-row>
 </template>
 
@@ -51,10 +51,11 @@ import { GET_POST_LIST } from '../apollo/queries';
 import { DELETE_POST } from '../apollo/mutations';
 import UiInput from '../ui-kit/ui-input/UiInput';
 import UiRow from '../ui-kit/ui-row/UiRow';
+import UiCol from '../ui-kit/ui-col/UiCol';
 
 export default {
   name: 'ManagePosts',
-  components: { UiRow, UiInput, UiButton, PostList },
+  components: { UiCol, UiRow, UiInput, UiButton, PostList },
   computed: {
     apolloVariables() {
       return {

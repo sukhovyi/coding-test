@@ -41,30 +41,6 @@ const GlobalStyle = createGlobalStyle`
     color: ${Theme.colors.tertiary};
   }
 
-  .col-10 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .col-7 {
-    flex: 0 0 70%;
-    max-width: 70%;
-  }
-
-  .col-8 {
-    flex: 0 0 80%;
-    max-width: 80%;
-  }
-  .col-3 {
-    flex: 0 0 30%;
-    max-width: 30%;
-  }
-
-  .col-2 {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-
   .align-center-end {
     display: inline-grid;
     align-items: center;
