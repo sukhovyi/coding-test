@@ -1,42 +1,50 @@
 <template>
   <div>
-    <h1>
-      Manage Posts
-    </h1>
-    <ui-button type="primary" @click="createPost">
-      Create Post
-    </ui-button>
-    <ui-input
-      :value="search"
-      :debounce-time="searchDebounce"
-      @input="onSearchChange"
-      label="Search"
-    />
+    <div class="row">
+      <div class="col-8">
+        <h1>
+          Manage Posts
+        </h1>
+      </div>
+      <div class="col-2 align-center-end">
+        <ui-button type="primary" @click="createPost">
+          Create Post
+        </ui-button>
+      </div>
+      <div class="col-10">
+        <ui-input
+          :value="search"
+          :debounce-time="searchDebounce"
+          @input="onSearchChange"
+          label="Search"
+        />
 
-    <span v-if="isLoading">
+        <span v-if="isLoading">
       Loading...
     </span>
-    <div v-else>
-      <p>
-        Posts found: {{ collection.totalCount }}
-      </p>
-      <post-list
-        :posts="collection.posts"
-        @delete="handleDeletePost"
-      />
-      <div>
-        <ui-button
-          v-if="!isFirstPage"
-          @click="prevPage"
-        >
-          prev page
-        </ui-button>
-        <ui-button
-          v-if="!isLastPage"
-          @click="nextPage"
-        >
-          next page
-        </ui-button>
+        <div v-else>
+          <p>
+            Posts found: {{ collection.totalCount }}
+          </p>
+          <post-list
+            :posts="collection.posts"
+            @delete="handleDeletePost"
+          />
+          <div>
+            <ui-button
+              v-if="!isFirstPage"
+              @click="prevPage"
+            >
+              prev page
+            </ui-button>
+            <ui-button
+              v-if="!isLastPage"
+              @click="nextPage"
+            >
+              next page
+            </ui-button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

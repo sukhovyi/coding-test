@@ -1,18 +1,25 @@
 <template>
   <div>
-    <h1>
-      Edit Post
-    </h1>
-    <ui-button type="danger" @click="handleDeletePost">
-      Delete Post
-    </ui-button>
-
-    <post-form
-      v-if="post"
-      :post="post"
-      @save="saveChanges"
-      @cancel="cancel"
-    />
+    <div class="row">
+      <div class="col-8">
+        <h1>
+          Edit Post
+        </h1>
+      </div>
+      <div class="col-2 align-center-end">
+        <ui-button type="danger" @click="handleDeletePost">
+          Delete Post
+        </ui-button>
+      </div>
+      <div class="col-10">
+        <post-form
+          v-if="post"
+          :post="post"
+          @save="saveChanges"
+          @cancel="cancel"
+        />
+      </div>
+    </div>
   </div>
 </template>
 

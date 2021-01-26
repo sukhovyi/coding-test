@@ -1,13 +1,17 @@
 <template>
-  <div>
-    <h1>
-      Create Post
-    </h1>
-    <post-form
-      :post="post"
-      @save="createPost"
-      @cancel="cancel"
-    />
+  <div class="row">
+    <div class="col-10">
+      <h1>
+        Create Post
+      </h1>
+    </div>
+    <div class="col-10">
+      <post-form
+        :post="post"
+        @save="createPost"
+        @cancel="cancel"
+      />
+    </div>
   </div>
 </template>
 
