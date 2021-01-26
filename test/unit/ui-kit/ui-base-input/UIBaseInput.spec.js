@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils';
 import BaseInput from '../../../../src/ui-kit/ui-base-input/BaseInput';
 import UiBaseInput from '../../../../src/ui-kit/ui-base-input/UiBaseInput';
 
-describe('ui-kit/ui-kit-base-input', () => {
+describe('ui-kit/ui-base-input', () => {
   it('BaseInput should have correct styling', () => {
     expect(BaseInput).toMatchSnapshot();
   });

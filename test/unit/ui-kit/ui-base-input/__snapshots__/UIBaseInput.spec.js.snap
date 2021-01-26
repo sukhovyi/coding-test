@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ui-kit/ui-kit-base-input BaseInput should have correct styling 1`] = `
+exports[`ui-kit/ui-base-input BaseInput should have correct styling 1`] = `
 Object {
   "__emotion_base": "div",
   "__emotion_real": [Circular],
@@ -21,7 +21,7 @@ Object {
 }
 `;
 
-exports[`ui-kit/ui-kit-base-input UiBaseInput should be rendered correctly 1`] = `
+exports[`ui-kit/ui-base-input UiBaseInput should be rendered correctly 1`] = `
 <base-input-stub>
   <div>
     
@@ -43,7 +43,7 @@ exports[`ui-kit/ui-kit-base-input UiBaseInput should be rendered correctly 1`] =
 </base-input-stub>
 `;
 
-exports[`ui-kit/ui-kit-base-input UiBaseInput should be rendered correctly when has errors 1`] = `
+exports[`ui-kit/ui-base-input UiBaseInput should be rendered correctly when has errors 1`] = `
 <base-input-stub>
   <div>
     
